@@ -1,0 +1,11 @@
+fieldset{
+    display: flex;
+    text-align: center;
+}
+input{
+    border: 1px outset indigo;
+    box-shadow: 2px 3px #8c8b8b;
+}
+.button {
+    box-shadow: 2px 3px rgb(60, 60, 83);
+}
