@@ -25,6 +25,7 @@ public class HomeController {
     }
     @RequestMapping("/code")
     public String code(){
+
         return "redirect:/code.html";
     }
 
