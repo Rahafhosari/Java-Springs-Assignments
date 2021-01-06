@@ -1,0 +1,18 @@
+div{
+    border: 2px dot-dot-dash #453a80;
+    display: flex;
+    justify-content: space-evenly;
+}
+.date{
+    color: #7d7dfa;
+    text-align: center;
+}
+.time{
+    color: darkolivegreen;
+    text-align: center;
+
+}
+fieldset{
+    border: 1px solid rgb(61, 61, 148);
+    font-family: "Calibri Light";
+}
