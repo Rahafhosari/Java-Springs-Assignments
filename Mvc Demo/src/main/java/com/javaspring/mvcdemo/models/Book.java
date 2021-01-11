@@ -1,4 +1,5 @@
 package com.javaspring.mvcdemo.models;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -6,8 +7,9 @@ import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
 @Entity
-@Table(name="books")
+@Table(name = "books")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,22 +26,25 @@ public class Book {
     @NotNull
     @Min(100)
     private Integer numberOfPages;
-// This will not allow the createdAt column to be updated after creation
-    @Column(updatable=false)
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    // This will not allow the createdAt column to be updated after creation
+    @Column(updatable = false)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createdAt;
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date updatedAt;
-//Constructors
+
+    //Constructors
     public Book() {
     }
+
     public Book(String title, String desc, String lang, int pages) {
         this.title = title;
         this.description = desc;
         this.language = lang;
         this.numberOfPages = pages;
     }
-//Getters
+
+    //Getters
     public Long getId() {
         return id;
     }
@@ -67,7 +72,8 @@ public class Book {
     public Date getUpdatedAt() {
         return updatedAt;
     }
-//Setters
+
+    //Setters
     public void setId(Long id) {
         this.id = id;
     }
@@ -96,13 +102,15 @@ public class Book {
         this.updatedAt = updatedAt;
     }
 
-// other getters and setters removed for brevity
+
+    // other getters and setters removed for brevity
     @PrePersist
-    protected void onCreate(){
+    protected void onCreate() {
         this.createdAt = new Date();
     }
+
     @PreUpdate
-    protected void onUpdate(){
+    protected void onUpdate() {
         this.updatedAt = new Date();
     }
 }
