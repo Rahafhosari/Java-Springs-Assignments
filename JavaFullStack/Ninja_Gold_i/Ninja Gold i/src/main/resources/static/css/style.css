@@ -1,0 +1,12 @@
+.activity{
+    overflow: scroll;
+}
+.randGold{
+    border: 1px dot-dot-dash olivedrab;
+}
+span{
+    color: darkgoldenrod;
+}
+.submit{
+    box-shadow: 2px 3px cornflowerblue;
+}

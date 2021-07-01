@@ -31,13 +31,13 @@ public class DriverController {
         return "redirect:/drivers"; }
     
     @RequestMapping("/drivers")
-	  public String index(Model model) {
-	      List<Person> persons = personsService.allPersons();
+	public String index(Model model) {
+        List<Person> persons = personsService.allPersons();
 //	      List<License> licenses = licensesService.allLicenses();
-	      model.addAttribute("persons", persons);
-//	      model.addAttribute("licences", licenses);
-	      return "index.jsp";
-	  }
+        model.addAttribute("persons", persons);
+//	      model.addAttribute("licences", licenses);H
+        return "index.jsp";
+	}
     
     @RequestMapping("/persons/new")
     public String newPerson(@ModelAttribute("person") Person person) {

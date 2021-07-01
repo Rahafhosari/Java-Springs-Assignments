@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn{
+    box-shadow: 2px 3px #6e93b7;
+}
+.form-control{
+    width: 80px;
+}
+table tr{
+    width: fit-content;
+}
