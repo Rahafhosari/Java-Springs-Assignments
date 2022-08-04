@@ -102,6 +102,8 @@ public class HomeController {
             proCatServ.AddCategoryForProduct(product_id,category_id);
             return "redirect:/product/" + product_id;
     }
+
+    
     @RequestMapping(value = "/category/{id}")
     public String categoryInfo(@PathVariable("id") Long id, Model model,@ModelAttribute("categoryProduct") CategoryProduct catPro,@ModelAttribute("product") Product product,@ModelAttribute("category") Category category) { //can use one model to show different attributes
         //Get category by ID
